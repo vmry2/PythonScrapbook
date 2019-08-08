@@ -1,5 +1,8 @@
 try:
-    f = open("test_file.txt")
+    f = open("Exceptions\\corrupt_file.txt")
+
+    # if f.name == "Exceptions\\corrupt_file.txt":
+    #     raise Exception
 except FileNotFoundError as e:
     print(e)
 except Exception as e:
@@ -7,5 +10,5 @@ except Exception as e:
 else:
     print(f.read())
     f.close()
-# finally:
-#     pass
+finally:
+    print("Executing finally")
